@@ -4,7 +4,7 @@
 _API Requests_
 
 ## Buy Data
-```
+
 ```php
 $curl = curl_init();
 
@@ -32,7 +32,7 @@ curl_setopt_array($curl, array(
 
 ## Buy Airtime
 
-```
+```php
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -87,7 +87,7 @@ curl_setopt_array($curl, array(
 
 *Example Code*
 
-```
+```php
 $token = '2a3fb8f841d94158ae2c199fa5e223b7268069aa8ce12202fb';
 $mobileNumber = '09066947271';
 $portedNumber = true;
