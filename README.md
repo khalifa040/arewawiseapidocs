@@ -15,36 +15,32 @@ _Buy Data_
     - `Ported_number`: `true`
 
 ```
-$token = '2a3fb8f841d94158ae2c199fa5e223b7268069aa8ce12202fb';
-$mobileNumber = '09066947271';
-$portedNumber = true;
-```
+
 ## Buy Data
-```
+```php
 $curl = curl_init();
-curl_setopt_array($curl, [
-    CURLOPT_URL => 'http://localhost:8080/api/data/index.php',
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_ENCODING => '',
-    CURLOPT_MAXREDIRS => 10,
-    CURLOPT_TIMEOUT => 0,
-    CURLOPT_FOLLOWLOCATION => true,
-    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => 'POST',
-    CURLOPT_POSTFIELDS => json_encode([
-        'network' => 1,
-        'mobile_number' => $mobileNumber,
-        'plan' => 319,
-        'Ported_number' => $portedNumber
-    ]),
-    CURLOPT_HTTPHEADER => [
-        'ArewaWiseToken: ' . $token,
-        'Content-Type: application/json'
-    ],
-]);
-$dataResponse = curl_exec($curl);
-curl_close($curl);
-```
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'http://localhost:8080/api/data/index.php',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS => json_encode(array(
+    'network' => 1,
+    'mobile_number' => '09066947271',
+    'plan' => 319,
+    'Ported_number' => true
+  )),
+  CURLOPT_HTTPHEADER => array(
+    'ArewaWiseToken: 2a3fb8f841d94158ae2c199fa5e223b7268069aa8ce12202fb',
+    'Content-Type: application/json'
+  ),
+));
+```php
 
 ## Buy Airtime
 
