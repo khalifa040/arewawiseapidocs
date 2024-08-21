@@ -1,4 +1,4 @@
-# Arewa Wise API Documentation
+# Arewa Wise Data API Documentation
 
 
 _API Requests_
