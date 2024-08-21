@@ -5,6 +5,7 @@ _API Requests_
 
 ## Buy Data
 ```
+<?php
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -27,6 +28,7 @@ curl_setopt_array($curl, array(
     'Content-Type: application/json'
   ),
 ));
+?>
 ```
 
 ## Buy Airtime
